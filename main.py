@@ -436,7 +436,7 @@ class miaomiao(Star):
     async def v50(self, event: AstrMessageEvent):
         """v我50！"""
         yield event.plain_result(
-            Image.open("v50.png")
+            PILImage.open("v50.png")
         )
             
     @command("喜报")
