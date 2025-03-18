@@ -435,10 +435,8 @@ class miaomiao(Star):
     @command("v50", alias = ["V50"])
     async def v50(self, event: AstrMessageEvent):
         """v我50！"""
-        yield event.plain_result(
-            Image.fromFileSystem("v50.png")
-        )
-            
+        yield event.make_result().file_image("/v50.png")
+
     @command("喜报")
     async def congrats(self, message: AstrMessageEvent):
         '''喜报生成器'''
